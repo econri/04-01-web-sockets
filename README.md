@@ -1,10 +1,38 @@
-**Steps**:
-* npm install
-* npm start
-* Open http://localhost:3000 in your browser
+# Доклад №4: "Каналы передачи данных. Защита информации."
 
-*If you want share your chat in the local network:*
-* change server ip in file './public/socket.js' to yours server ip in that network 
+### Пример №1. Пример использования веб-сокетов
 
-*like io.connect("http://localhost:3000") => io.connect("http://127.0.0.1:3000")*
-*and don't forget to open connections to your port in firewall*
+##### Установка и запуск
+
+1. Установить [Node.js](https://nodejs.org/en/) и [Git](https://git-scm.com/downloads) (по желанию)
+2. Клонировать или загрузить проект в виде архива
+
+В консоли/терминале:
+``` bash
+# Перейти в папку, в которую планируется клонирование проекта, например:
+$ cd /Projects
+# Клонировать проект из репозитория
+$ git clone https://github.com/econri/04-01-web-sockets.git
+```
+
+3. Запустить серверное приложение
+
+В консоли/терминале:
+
+``` bash
+# Перейти в папку проекта
+$ cd 03-05-nginx-balancer
+# Установить пакеты зависимостей
+$ npm install
+# Запустить
+$ npm start
+```
+
+Web-приложение будет запущено по адресу http://localhost:3000
+
+*В случае, если требуется подключение не только на локальной машине, но и на устройствах в локальной сети, где находится сервер:*
+* измените ip сервера в файле './public/socket.js' на то, которое присвоено серверной машине в сети 
+
+*Например io.connect("http://localhost:3000") может быть заменено на io.connect("http://192.168.137.1:3000"), данный ip часто присваивается машине в случае, если она работает как раздающая wi-fi точка*
+
+*Не забудьте в случае открытия доступа к машне в сети, открыть доступ на входящие подключения к используемому порту*
